@@ -12,33 +12,36 @@ public class main {
     public static void main(String[] args) throws Exception{
         Scanner input = new Scanner(System.in);
         Node header = null;
-        int N = input.nextInt();
-        for (int i = 0; i < N; i++) {
-            if (header == null){
-                header = new Node(new Users(input.next().toUpperCase(), input.nextInt(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase()));
-            }else{
-                Node temp = new Node(new Users(input.next().toUpperCase(), input.nextInt(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase()));
-                temp.linked = header;
-                header = temp;
-            }
-        }
         boolean isTrue = true;
         while (isTrue){
             MenuOptions.menuDatas();
             int caso = input.nextInt();
             Node aux = header;
             switch (caso){
-                case 0:
+                case 1:{
+                    System.out.println("Enter your data in the next order: gender id  name lastName birthDay job");
+                    if (header == null){
+                            header = new Node(new Users(input.next().toUpperCase(), input.nextInt(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase()));
+                        }else{
+                            Node temp = new Node(new Users(input.next().toUpperCase(), input.nextInt(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase(), input.next().toUpperCase()));
+                            temp.linked = header;
+                            header = temp;
+                        }
+                    break;
+                }
+                case 0:{
                     System.out.println(FontsColor.azul+"The process is over. Thank you for using our services. :)");
                     isTrue = false;
                     break;
-                case 1:
+                }
+                case 2:{
                     while (aux != null){
                         System.out.println(aux.Data.printData());
                         aux = aux.linked;
                     }
                     break;
-                case 2:
+                }
+                case 3:{
                     boolean isTrueA = true;
                     while (isTrueA){
                         MenuOptions.menuDataOfAge();
@@ -68,7 +71,8 @@ public class main {
 
                     }
                     break;
-                case 3:
+                }
+                case 4:{
                     boolean optionGender = true;
                     while (optionGender){
                         MenuOptions.menuDataOfgender();
@@ -93,40 +97,40 @@ public class main {
                         }
                     }
                     break;
-                case 4:
-                    PrintDataInOrder.sortData(aux, header, N);
-                    break;
-                case 5:
+                }
+                case 6: {
                     boolean isTrueName = true;
-                    while (isTrueName){
+                    while (isTrueName) {
                         MenuOptions.menuDataNames();
                         int caseName = input.nextInt();
-                        switch (caseName){
+                        switch (caseName) {
                             case 0:
-                                System.out.println(FontsColor.azul+"The process is over. Thank you for using our services. :)");
-                                optionGender = false;
+                                System.out.println(FontsColor.azul + "The process is over. Thank you for using our services. :)");
+                                isTrueName = false;
                                 break;
                             case 1:
-                                System.out.println(FontsColor.verde+"Enter the name of user:");
+                                System.out.println(FontsColor.verde + "Enter the name of user:");
                                 String name = input.next();
                                 SearchUserByName.printEverybodyUsers(header, name);
 
                                 break;
                             case 2:
-                                System.out.println(FontsColor.verde+"Enter the name of user and last name:");
+                                System.out.println(FontsColor.verde + "Enter the name of user and last name:");
                                 String nameA = input.next();
                                 String lastName = input.next();
                                 SearchUserByName.printUser(header, nameA, lastName);
                                 break;
                             default:
-                                System.out.println(FontsColor.rojo+"<<||>>select one of the menu options<<||>>".toUpperCase());
+                                System.out.println(FontsColor.rojo + "<<||>>select one of the menu options<<||>>".toUpperCase());
                                 break;
                         }
                     }
                     break;
-                default:
+                }
+                default:{
                     System.out.println(FontsColor.rojo+"<<||>>select one of the menu options<<||>>".toUpperCase());
                     break;
+                }
             }
         }
     }

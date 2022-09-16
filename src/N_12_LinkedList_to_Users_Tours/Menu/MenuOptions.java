@@ -13,10 +13,11 @@ public class MenuOptions {
 
     public static void menuDatas(){
         System.out.println(FontsColor.naranja+">>Please Choose a optyon<<".toUpperCase());
-        System.out.println(FontsColor.naranja+"\n1.-Print everybody datas" +
-                           FontsColor.naranja+"\n2.-Print the data of the user by age"+
-                           FontsColor.naranja+"\n3.-Print data for Gender"+
-                           FontsColor.naranja+"\n4.-Print data in alphabetical order"+
+        System.out.println(FontsColor.naranja+"\n1.-Add new User" +
+                           FontsColor.naranja+"\n2.-Print everybody datas" +
+                           FontsColor.naranja+"\n3.-Print the data of the user by age"+
+                           FontsColor.naranja+"\n4.-Print data for Gender"+
+                           FontsColor.naranja+"\n5.-Print data in alphabetical order"+
                            FontsColor.naranja+"\n0.-Exit The Program");
     }
     public static void  menuDataOfgender(){
