@@ -27,8 +27,7 @@ public class Window extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 System.out.println(number++);
             }
-        });
-        this.button.setBounds(50,50, 100, 30);
+        }, new Point(50,50), new Dimension(100,50));
         this.add(this.button);
     }
 
