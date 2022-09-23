@@ -23,11 +23,13 @@ public class Window extends JFrame {
     private void loadComponents() {
         this.number = 0;
         this.button = new JButton("Click me", new ActionListener() {
+            int counter = 0;
             @Override
+
             public void actionPerformed(ActionEvent e) {
-                System.out.println(number++);
+                System.out.println(counter++);
             }
-        }, new Point(50,50), new Dimension(100,50));
+        }, new Point(50, 50), new Dimension(100, 50));
         this.add(this.button);
     }
 
