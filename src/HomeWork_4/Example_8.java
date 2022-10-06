@@ -2,7 +2,7 @@ package HomeWork_4;
 
 public class Example_8 {
     public static void main(String[] args) {
-        System.out.println(isCousin(1));
+        System.out.println("1 = " + isCousin(1));
         System.out.println(isCousin(3));
         System.out.println(isCousin(4));
         System.out.println(isCousin(5));
