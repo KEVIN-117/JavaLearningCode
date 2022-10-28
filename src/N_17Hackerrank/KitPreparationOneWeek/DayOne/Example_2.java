@@ -20,7 +20,9 @@ public class Example_2 {
         String inputDate = input.nextLine();
         String FormatDate = inputDate.substring(0,8)+ " " + inputDate.substring(8,inputDate.length());
 
-        String result = LocalTime.parse(FormatDate, DateTimeFormatter.ofPattern("hh:mm:ss a", Locale.US)).format( DateTimeFormatter.ofPattern("HH:mm:ss"));
+        String result = LocalTime.parse(FormatDate, DateTimeFormatter
+                        .ofPattern("hh:mm:ss a", Locale.US))
+                .format( DateTimeFormatter.ofPattern("HH:mm:ss"));
         System.out.println(result);
     }
 }
