@@ -1,3 +1,5 @@
+package N_23_CodeWars;
+
 import javax.management.ObjectName;
 import java.util.Arrays;
 import java.util.List;

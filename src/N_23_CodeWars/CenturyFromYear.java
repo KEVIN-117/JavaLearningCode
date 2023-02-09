@@ -1,3 +1,5 @@
+package N_23_CodeWars;
+
 import java.util.Date;
 
 public class CenturyFromYear {
