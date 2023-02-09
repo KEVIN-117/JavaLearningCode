@@ -2,7 +2,7 @@ package N_19CODESIGNAL;
 
 public class Example_1 {
     public static void main(String[] args) {
-        System.out.println(fun(1700));
+        System.out.println(fun(2000 ));
     }
     static int fun(int year){
         Double save = (double)(year)/100;

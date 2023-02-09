@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class sumarData {
     public static void main(String[] args) {
-        String names = "2.156-1.381-1.205-1.214-1.265-1.192-1.267-1.236-1.146-1.725";
+        /*String names = "2.156-1.381-1.205-1.214-1.265-1.192-1.267-1.236-1.146-1.725";
 
         String[] array = names.split("-");
         double suma = 0;
@@ -16,6 +16,7 @@ public class sumarData {
         Date yearActuality = Calendar.getInstance().getTime();
         String[] year = String.valueOf(yearActuality).split(" ");
         int yearsOld = Integer.parseInt(String.valueOf(Integer.parseInt(year[year.length-1])-Integer.parseInt(listAge[listAge.length-1])));
-        System.out.println(yearsOld);
+        System.out.println(yearsOld);*/
+        System.out.println(3%1);
     }
 }

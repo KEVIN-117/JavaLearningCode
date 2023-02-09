@@ -45,6 +45,11 @@ public class Example_8 {
             counter++;
             String word = scan.nextLine();
             System.out.println(counter + " " + word);
+            if(scan.hasNextLine()){
+                scan.close();
+                break;
+            }
+
         }
     }
 }
