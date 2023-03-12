@@ -1,4 +1,4 @@
-package N_22_CodeWars;
+package N_23_CodeWars;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ public class ConverNumberToReverseArrayOfDigits {
         int number = 35231;
         System.out.println(Arrays.toString(digitize(number)));
     }
-    public static int[] digitize(long n){
+    public static int[] digitize1(long n){
         int[] list = new int[String.valueOf(n).length()];
         int index = 0;
         while (n != 0){
