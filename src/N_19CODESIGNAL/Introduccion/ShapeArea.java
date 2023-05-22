@@ -1,6 +1,6 @@
-package N_19CODESIGNAL;
+package N_19CODESIGNAL.Introduccion;
 
-public class Example_4 {
+public class ShapeArea {
     /*
         A continuación definiremos un polígono n. Tu tarea es encontrar el área de un polígono para un n dado.
                                                               |_|

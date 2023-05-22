@@ -1,6 +1,6 @@
-package N_19CODESIGNAL;
+package N_19CODESIGNAL.Introduccion;
 
-public class Example_2 {
+public class CheckPalindrome {
     public static void main(String[] args) {
         System.out.println(fun("Eye"));
     }
@@ -10,9 +10,6 @@ public class Example_2 {
         for (int i = save.length-1; i>-1 ; i--) {
             palindrome += save[i];
         }
-        if (text.toLowerCase().equals(palindrome))
-            return true;
-        else
-            return false;
+        return text.toLowerCase().equals(palindrome);
     }
 }

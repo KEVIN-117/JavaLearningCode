@@ -1,4 +1,4 @@
-package N_19CODESIGNAL;
+package N_19CODESIGNAL.Introduccion;
 
 import java.util.Arrays;
 /*
@@ -12,7 +12,7 @@ import java.util.Arrays;
     solution(statues) = 3.
     Ratiorg necsita statuas de tamaño 4, 5 y 7.
  */
-public class Example_5 {
+public class MakeArrayConsecutive2 {
     public static void main(String[] args) {
         int[] statues = {0,3};
         System.out.println(fun(statues));

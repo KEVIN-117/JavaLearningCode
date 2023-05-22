@@ -6,7 +6,7 @@ import N_27_DESIGN_PATTERNS.Creational_Patterns.FactoryMethod.WebDialog;
 import N_27_DESIGN_PATTERNS.Creational_Patterns.FactoryMethod.WindowsDialog;
 
 public class Main {
-    static Dialog dialog;
+    private static Dialog dialog;
     public static void initialize(int opt){
         if (opt == 1){
             dialog = new WindowsDialog();

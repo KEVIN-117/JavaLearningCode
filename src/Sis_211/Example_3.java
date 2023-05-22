@@ -1,11 +1,15 @@
 package Sis_211;
 
+import Sis_211.StaticUsing.Personas;
+
 import java.util.Arrays;
 
 public class Example_3 {
     public static void main(String[] args) {
         int[] array = {2,2,3,3,3,4,53};
         counterNumbers(array);
+        Personas personas = new Personas();
+
     }
     public static void counterNumbers(int[] listNumber){
         int counter = 0;

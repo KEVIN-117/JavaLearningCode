@@ -7,6 +7,5 @@ public abstract class Dialog {
     public void render(){
         Button okButton = createButton();
         okButton.render(10, 20);
-        okButton.onClick("click me...!!!");
     }
 }

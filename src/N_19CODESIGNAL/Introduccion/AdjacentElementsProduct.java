@@ -1,6 +1,6 @@
-package N_19CODESIGNAL;
+package N_19CODESIGNAL.Introduccion;
 
-public class Example_3 {
+public class AdjacentElementsProduct {
     public static void main(String[] args) {
         int[] array = {-23, 4, -3, 8, -12};
         System.out.println(fun(array));
