@@ -72,7 +72,7 @@ public class Users {
      * @param id
      */
     public void setId(int id) {
-        Id = id;
+        this.Id = id;
     }
 
     /**

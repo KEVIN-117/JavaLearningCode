@@ -9,6 +9,16 @@ public class Person {
         this.lastName = lastName;
     }
 
+    public Person(String name, Integer age) {
+        this.name = name;
+    }
+
+    public Person(String lastName) {
+        this.lastName = lastName;
+    }
+
+
+
     public String getName() {
         return name;
     }
