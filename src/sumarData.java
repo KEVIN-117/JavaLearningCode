@@ -1,22 +1,41 @@
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Stack;
 
 public class sumarData {
-    public static void main(String[] args) {
-        /*String names = "2.156-1.381-1.205-1.214-1.265-1.192-1.267-1.236-1.146-1.725";
+    public static String reverseInParentheses(String input) {
+        Stack<Character> stack = new Stack<>();
 
-        String[] array = names.split("-");
-        double suma = 0;
-        for (int i = 0; i <array.length ; i++) {
-            suma +=  Double.parseDouble(array[i]);
+        for (char c : input.toCharArray()) {
+            if (c == ')') {
+                StringBuilder sb = new StringBuilder();
+
+                while (!stack.isEmpty() && stack.peek() != '(') {
+                    sb.append(stack.pop());
+                }
+
+                if (!stack.isEmpty() && stack.peek() == '(') {
+                    stack.pop(); // Eliminar el '('
+                    for (char ch : sb.toString().toCharArray()) {
+                        stack.push(ch); // Revertir y agregar los caracteres a la pila
+                    }
+                }
+            } else {
+                stack.push(c); // Agregar otros caracteres a la pila
+            }
         }
-        System.out.println(suma/array.length);
-        String birthDay = "17/12/2001";
-        String[] listAge = birthDay.split("/");
-        Date yearActuality = Calendar.getInstance().getTime();
-        String[] year = String.valueOf(yearActuality).split(" ");
-        int yearsOld = Integer.parseInt(String.valueOf(Integer.parseInt(year[year.length-1])-Integer.parseInt(listAge[listAge.length-1])));
-        System.out.println(yearsOld);*/
-        System.out.println(3%1);
+
+        StringBuilder result = new StringBuilder();
+        while (!stack.isEmpty()) {
+            result.append(stack.pop());
+        }
+
+        return result.reverse().toString(); // Revertir el resultado final
+    }
+
+    public static void main(String[] args) {
+        String input = "(bar)baz(blim)";
+        String output = reverseInParentheses(input);
+        System.out.println(output);
     }
 }
