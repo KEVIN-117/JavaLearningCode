@@ -3,7 +3,7 @@ package N_17Hackerrank;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Example_15 {
+public class JavaAnagrams {
     /*
         dos cadena a y b se llaman anagramas si contienen todos los mismos caracteres en las mismas frecuencias.
         Para este desafío, la prueba no distingue entre mayúsculas y minúsculas. Por ejemplo, los anagramas de CAT
@@ -23,41 +23,22 @@ public class Example_15 {
         Entrada                 Salida
             anagram
             margana             Anagrams
-
-
-        Coidgo en el editor:
-            import java.util.Scanner;
-            public class Solution {
-                static boolean isAnagram(String a, String b) {
-                }
-                public static void main(String[] args) {
-
-                    Scanner scan = new Scanner(System.in);
-                    String a = scan.next();
-                    String b = scan.next();
-                    scan.close();
-                    boolean ret = isAnagram(a, b);
-                    System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
-                }
-            }
     */
     static boolean isAnagram(String a, String b) {
         String[] stringA = a.toLowerCase().split("");
         String[] stringB = b.toLowerCase().split("");
         Arrays.sort(stringA);
         Arrays.sort(stringB);
-        String newA = "";
-        String newB = "";
-        for (int i = 0; i < stringA.length; i++) {
-            newA += stringA[i];
+        StringBuilder newA = new StringBuilder();
+        StringBuilder newB = new StringBuilder();
+        for (String value : stringA) {
+            newA.append(value);
         }
-        for (int i = 0; i < stringB.length; i++) {
-            newB += stringB[i];
+        for (String s : stringB) {
+            newB.append(s);
         }
         // Complete the function
-        if (newA.equals(newB))
-            return true;
-        return false;
+        return newA.toString().equals(newB.toString());
     }
 
     public static void main(String[] args) {
